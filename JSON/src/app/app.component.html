@@ -2,19 +2,11 @@
   <tr>
     <td>
       <label for="inputJSON">Input (editable field)</label>
-      <textarea id="inputJSON"></textarea>
+      <textarea id="inputJSON" [(ngModel)]="inputText" (ngModelChange)="updateOutput()"></textarea>
     </td>
     <td>
       <label for="outputJSON">Output</label>
-      <textarea id="outputJSON" readonly></textarea>
+      <textarea id="outputJSON" [(ngModel)]="outputText" readonly></textarea>
     </td>
   </tr>
 </table>
-<!-- 
-<div id="output">
-
-</div>
-
-<div id="input">
-
-</div> -->
