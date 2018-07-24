@@ -1,0 +1,75 @@
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: url('./../assets/MaterialIconsFont.woff2') format('woff2');
+}
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 44px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-feature-settings: 'liga';
+  -webkit-font-smoothing: antialiased;
+  margin: 0 30px;
+  cursor: pointer;
+}
+* {
+  font-family: Calibri, sans-serif;
+}
+table, #pagination {
+  margin: auto;
+  width: 60%;
+}
+td {
+  border-bottom: 1px solid black;
+  padding: 10px 40px;
+}
+#mainTitle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  margin: 30px;
+}
+h1 {
+  font-size: 3em;
+  margin: auto;
+}
+h2 {
+  display: inline;
+}
+img {
+  height: 20px;
+  border-radius: 3px;
+  vertical-align: middle;
+}
+a {
+  text-decoration: none;
+  font-weight: bold;
+}
+a:hover {
+  text-decoration: underline;
+}
+.blue {
+  color: #0259e4;
+}
+.black {
+  color: black;
+}
+#pagination {
+  text-align: center;
+}
+.currentPage {
+  position: relative;
+  bottom: 11px;
+  font-size: 30px;
+  font-weight: bold;
+}

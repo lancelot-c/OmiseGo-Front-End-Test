@@ -7,6 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 
+  title = 'app'
   inputText: string
   outputText: string
 

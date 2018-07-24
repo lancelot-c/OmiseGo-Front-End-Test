@@ -1,0 +1,32 @@
+
+
+<div id="mainTitle">
+  <h1>GitHub public repositories</h1>
+</div>
+
+
+<table>
+  <tr *ngFor="let repo of githubRepos">
+    <td>
+      <h2><a href="{{repo.html_url}}" class="blue">{{repo.name}}</a></h2><br />
+
+      by
+      <a href="{{repo.owner.html_url}}" class="black">
+        <img src="{{repo.owner.avatar_url}}" />
+        {{repo.owner.login}}
+      </a>
+
+    </td>
+    <td>
+      {{repo.description}}
+    </td>
+  </tr>
+</table>
+
+<div id="pagination">
+  <!-- <i class="material-icons">first_page</i> -->
+  <i class="material-icons" (click)="previous_page()">chevron_left</i>
+  <span class="currentPage">Page {{currentPage}}</span>
+  <i class="material-icons" (click)="next_page()">chevron_right</i>
+  <!-- <i class="material-icons">last_page</i> -->
+</div>
