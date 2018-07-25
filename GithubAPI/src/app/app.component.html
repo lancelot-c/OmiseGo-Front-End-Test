@@ -8,8 +8,12 @@
 <table>
   <tr *ngFor="let repo of githubRepos">
     <td>
-      <h2><a href="{{repo.html_url}}" class="blue">{{repo.name}}</a></h2><br />
 
+      <a href="{{repo.html_url}}" class="blue">
+        <h2>
+          {{repo.name}}
+        </h2>
+      </a><br />
       by
       <a href="{{repo.owner.html_url}}" class="black">
         <img src="{{repo.owner.avatar_url}}" />
@@ -18,12 +22,15 @@
 
     </td>
     <td>
+
       {{repo.description}}
+
     </td>
   </tr>
 </table>
 
-<div id="pagination">
+
+<div class="pagination noselect">
   <!-- <i class="material-icons">first_page</i> -->
   <i class="material-icons" (click)="previous_page()">chevron_left</i>
   <span class="currentPage">Page {{currentPage}}</span>

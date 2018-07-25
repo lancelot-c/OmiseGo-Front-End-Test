@@ -20,11 +20,13 @@ export class AppComponent implements OnInit {
     this.updateGithubRepos();
   }
 
+  // Show the previous repositories
   next_page() {
     this.currentPage++
     this.updateGithubRepos()
   }
 
+  // Show the next repositories
   previous_page() {
     if (this.currentPage == 1)
       return
@@ -33,16 +35,17 @@ export class AppComponent implements OnInit {
     this.updateGithubRepos()
   }
 
+  // Get the repositories considering the current page number
   updateGithubRepos() {
+    // A proper way to handle pagination would be using the Link Haader provided by the Github API
+    // unfortunately I'm not able to read the headers of the API, it might either be a bug on their side or on my side
     this.http.get<Array<any>>(this.githubApiUrl+"?since="+this.currentPage*10)
-    // PROVIDED BY GITHUB API BUT NOT WORKING : +"&page="+this.currentPage+"&per_page="+this.reposPerPage)
     .subscribe(data => {
-      // console.log(data);
-      // console.log(this.githubRepos);
       this.githubRepos = data.slice(0, this.reposPerPage);
     }
     , err => {
       console.log(err)
     });
   }
+
 }
